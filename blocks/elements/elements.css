@@ -1,0 +1,9 @@
+.elements{
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns:282px 282px 282px;
+  grid-row-gap: 20px;
+  grid-column-gap: 17px;
+}

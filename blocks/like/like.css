@@ -1,0 +1,17 @@
+.like{
+  outline: 0;
+  background: transparent;
+  transition: opacity .2s ease-in-out;
+  border: none;
+  background:url(../../images/like.svg) no-repeat center;
+  width: 22px;
+  height: 19px;
+}
+
+.like:hover{
+opacity: .6;
+}
+
+.like.active{
+  background-image:url(../../images/active-like.svg);
+}
