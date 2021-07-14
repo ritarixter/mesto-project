@@ -1,0 +1,7 @@
+.btn__add{
+  align-self: center;
+  border: 2px solid #fff;
+  width: 150px;
+  height: 50px;
+  background: url(../../../images/plus.svg) no-repeat center;
+}

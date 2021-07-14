@@ -1,6 +1,4 @@
 .profile__content{
   display: grid;
-  grid-template-areas: 
-  "profile__avatar profile__info add";
   grid-template-columns: min-content 1fr min-content;
 }
