@@ -1,3 +1,13 @@
 .header{
   padding-top: 45px;
 }
+
+@media screen and (max-width:767px){
+  .header{
+    padding-top: 28px;
+  }
+
+  .header .page__container{
+    padding: 0;
+  }
+}

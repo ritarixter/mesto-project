@@ -1,6 +1,6 @@
 .btn__like{
   background:url(../../../images/like.svg) no-repeat center;
-  width: 22px;
+  min-width: 22px;
   height: 19px;
 }
 

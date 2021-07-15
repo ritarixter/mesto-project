@@ -3,7 +3,12 @@
   height: 24px;
   border: 1px solid #fff;
   background: url(../../../images/change.svg) no-repeat center;
-
 }
 
+@media screen and (max-width:767px){
+  .btn__edit{
+    width: 18px;
+    height: 18px;
+  }
+}
 

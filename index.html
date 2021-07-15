@@ -17,7 +17,7 @@
     <header class="header">
       <div class="page__container">
         <div class="header__content">
-          <img src="./images/logo.svg" alt="Лого Mesto Russia">
+          <img src="./images/logo.svg" alt="Лого Mesto Russia" class="header__logo">
         </div>
       </div>
     </header>
@@ -27,84 +27,85 @@
           <div class="profile__content">
             <img src="./images/avatar.jpg" alt="Аватар" class="profile__avatar">
             <div class="profile__info">
-              <h1 class="profile__name">Жак-Ив Кусто 
+              <h1 class="profile__name">Жак-Ив Кусто
               </h1>
               <button class="btn btn__edit profile__btn__edit">
               </button>
               <p class="profile__prof">Исследователь океана</p>
             </div>
-            
-            <button class="btn btn__add"></button>
+            <button class="btn btn__add profile__btn__add"></button>
           </div>
         </div>
       </section>
-
       <section>
         <div class="page__container">
           <ul class="elements">
             <li class="element">
               <img src="./images/1.PNG" alt="Никола-Ленивец" class="element__image">
               <div class="element__content">
-              <h2 class="element__name">Никола-Ленивец</h2>
-              <button class="btn btn__like active">
-              </button>
-            </div>
+                <h2 class="element__name">Никола-Ленивец</h2>
+                <button class="btn btn__like active">
+                </button>
+              </div>
             </li>
-
             <li class="element">
               <img src="./images/2.PNG" alt="Плато Бермамыт" class="element__image">
               <div class="element__content">
-              <h2 class="element__name">Плато Бермамыт</h2>
-              <button class="btn btn__like">
-              </button>
-            </div>
+                <h2 class="element__name">Плато Бермамыт</h2>
+                <button class="btn btn__like">
+                </button>
+              </div>
             </li>
-
             <li class="element">
               <img src="./images/3.PNG" alt="Кижи" class="element__image">
               <div class="element__content">
-              <h2 class="element__name">Кижи</h2>
-              <button class="btn btn__like">
-              </button>
-            </div>
+                <h2 class="element__name">Кижи</h2>
+                <button class="btn btn__like">
+                </button>
+              </div>
             </li>
-
             <li class="element">
               <img src="./images/4.PNG" alt="Замок Ласточкино гнездо" class="element__image">
               <div class="element__content">
-              <h2 class="element__name">Замок Ласточкино гнездо</h2>
-              <button class="btn btn__like">
-              </button>
-            </div>
+                <h2 class="element__name">Замок Ласточкино гнездо</h2>
+                <button class="btn btn__like">
+                </button>
+              </div>
             </li>
-
             <li class="element">
               <img src="./images/5.PNG" alt="Дом Зингера" class="element__image">
               <div class="element__content">
-              <h2 class="element__name">Дом Зингера</h2>
-              <button class="btn btn__like">
-              </button>
-            </div>
+                <h2 class="element__name">Дом Зингера</h2>
+                <button class="btn btn__like">
+                </button>
+              </div>
             </li>
-
             <li class="element">
               <img src="./images/6.PNG" alt="Столбы выветривания" class="element__image">
               <div class="element__content">
-              <h2 class="element__name">Столбы выветривания</h2>
-              <button class="btn btn__like">
-              </button>
-            </div>
+                <h2 class="element__name">Столбы выветривания</h2>
+                <button class="btn btn__like">
+                </button>
+              </div>
             </li>
-
           </ul>
         </div>
       </section>
     </main>
     <footer class="footer">
       <div class="page__container">
-      <p class="footer__copyright">&copy; 2020 Mesto Russia</p>
-    </div>
+        <p class="footer__copyright">&copy; 2020 Mesto Russia</p>
+      </div>
     </footer>
+    <div class="popup">
+      <form class="popup__container">
+        <button class="btn btn__close popup__btn__close"></button>
+        <h2 class="popup__heading">Редактировать профиль</h2>
+        <input type="text" placeholder="Имя" value="Жак-Ив Кусто" class="popup__input" name="firstname">
+        <input type="text" placeholder="Профессия" value="Исследователь океана" class="popup__input" name="profession">
+        <button type="submit" class="popup__button">Сохранить</button>
+      </form>
+    </div>
   </div>
 </body>
 
