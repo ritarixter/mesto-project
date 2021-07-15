@@ -1,10 +1,10 @@
-.profile__btn__edit{
+.btn_position_end{
   align-self: end;
   margin: 0 0 8px 19px;
 }
 
 @media screen and (max-width:767px){
-  .profile__btn__edit{
-    margin: 0 0 14px 10px;
+  .btn_position_end{
+    margin: 0 0 8px 10px;
   }
 }

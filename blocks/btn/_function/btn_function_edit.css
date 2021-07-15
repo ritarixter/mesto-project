@@ -1,4 +1,4 @@
-.btn__edit{
+.btn_function_edit{
   width: 24px;
   height: 24px;
   border: 1px solid #fff;
@@ -6,7 +6,7 @@
 }
 
 @media screen and (max-width:767px){
-  .btn__edit{
+  .btn_function_edit{
     width: 18px;
     height: 18px;
   }

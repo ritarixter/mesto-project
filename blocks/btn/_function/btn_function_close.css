@@ -1,4 +1,4 @@
-.btn__close{
+.btn_function_close{
   width: 32px;
   height: 32px;
   background: url(../../../images/close-icon.svg) no-repeat center;
@@ -6,7 +6,7 @@
 }
 
 @media screen and (max-width:767px) {
-  .btn__close{
+  .btn_function_close{
     width: 20px;
     height: 20px;
     background-size: 20px 20px;

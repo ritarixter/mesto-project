@@ -9,7 +9,9 @@
   border-radius: 2px;
   transition: opacity .2s ease-in-out;
   font-family: inherit;
-  font-size: 14px;
+  font-size: 18px;
+  line-height: 22px;
+  cursor: pointer;
 }
 
 .popup__button:hover{
@@ -19,5 +21,7 @@
 @media screen and (max-width:767px) {
   .popup__button{
     min-height: 46px;
+    font-size: 14px;
+    line-height: 17px;
   }
 }
