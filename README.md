@@ -10,5 +10,6 @@
 * CSS3
 * БЭМ
 * Forms
+* JavaScript
 
 [Ссылка на GitHub Pages](https://ritarixter.github.io/mesto-project/index.html)

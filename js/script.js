@@ -122,12 +122,16 @@ card_delete.addEventListener('click', function(evt){
 })
 })
 
-addCard(initialCards[0].link,initialCards[0].name);
+initialCards.forEach(item => {
+  addCard(item.link,item.name);
+})
+
+/*addCard(initialCards[0].link,initialCards[0].name);
 addCard(initialCards[1].link,initialCards[1].name);
 addCard(initialCards[2].link,initialCards[2].name);
 addCard(initialCards[3].link,initialCards[3].name);
 addCard(initialCards[4].link,initialCards[4].name);
-addCard(initialCards[5].link,initialCards[5].name);
+addCard(initialCards[5].link,initialCards[5].name);*/
 
 const element_images = document.querySelectorAll('.element__image');
 
