@@ -13,7 +13,7 @@ module.exports = {
   mode: 'development',
   devServer: {
     compress: true, 
-    port: 8082,
+    port: 8084,
     open: true,
     watchFiles: ['src/index.html']
   },

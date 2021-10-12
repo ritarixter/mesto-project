@@ -1,7 +1,7 @@
 {
   "name": "mesto",
-  "version": "1.0.0",
-  "description": "**Описание**\r Личная страница с карточками интересных мест России.",
+  "version": "0.0.1",
+  "description": "",
   "main": "index.js",
   "scripts": {
     "build": "webpack --mode production",
@@ -9,12 +9,32 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/ritarixter/mesto.git"
+    "url": "git+https://github.com/ritarixter/mesto-project.git"
   },
-  "author": "",
+  "author": "Rita Rixter",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/ritarixter/mesto/issues"
+    "url": "https://github.com/ritarixter/mesto-project/issues"
   },
-  "homepage": "https://github.com/ritarixter/mesto#readme"
+  "homepage": "https://github.com/ritarixter/mesto-project#readme",
+  "devDependencies": {
+    "@babel/core": "^7.15.5",
+    "@babel/preset-env": "^7.15.6",
+    "autoprefixer": "^10.3.5",
+    "babel-loader": "^8.2.2",
+    "clean-webpack-plugin": "^4.0.0",
+    "css-loader": "^6.3.0",
+    "cssnano": "^5.0.8",
+    "file-loader": "^6.2.0",
+    "html-loader": "^2.1.2",
+    "html-webpack-plugin": "^5.3.2",
+    "mini-css-extract-plugin": "^2.3.0",
+    "postcss-loader": "^6.1.1",
+    "webpack": "^5.53.0",
+    "webpack-cli": "^4.8.0",
+    "webpack-dev-server": "^4.2.1"
+  },
+  "dependencies": {
+    "core-js": "^3.18.0"
+  }
 }
