@@ -16,6 +16,11 @@ function errorShow(error, errorClass, input, inputErrorClass) {
   input.classList.add(inputErrorClass);
 }
 
+function buttonDisabled(button,inactiveButtonClass) {
+  button.setAttribute("disabled", "disabled");
+  button.classList.add(inactiveButtonClass);
+}
+
 function enableButtonIsFormValid(inputs,submitButtonSelector,form,inactiveButtonClass) {
   const button = form.querySelector(submitButtonSelector);
   const formIsValid = inputs.every((input) => input.validity.valid);
@@ -23,8 +28,7 @@ function enableButtonIsFormValid(inputs,submitButtonSelector,form,inactiveButton
     button.removeAttribute("disabled");
     button.classList.remove(inactiveButtonClass);
   } else {
-    button.setAttribute("disabled", "disabled");
-    button.classList.add(inactiveButtonClass);
+    buttonDisabled(button,inactiveButtonClass);
   }
 }
 
@@ -53,12 +57,8 @@ export default function enableValidation(variablesValidation) {
 
     form.addEventListener("submit", function (evt) {
       evt.preventDefault();
-      //Такое решение под вопросом, функция enableButtonIsFormValid() не срабатывает, потому что при 'submit' поля еще валидны?
-      const button = form.querySelector(
-        variablesValidation.submitButtonSelector
-      );
-      button.setAttribute("disabled", "disabled");
-      button.classList.add(variablesValidation.inactiveButtonClass);
+      const button = form.querySelector(variablesValidation.submitButtonSelector);
+      buttonDisabled(button,variablesValidation.inactiveButtonClass);
     });
   });
 }
