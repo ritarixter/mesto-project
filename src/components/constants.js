@@ -15,6 +15,8 @@ const cardTemplate = document.querySelector('#template-element').content;
 const popupCardName = document.querySelector('.popup__card-name');
 const popupCardLink = document.querySelector('.popup__card-link');
 const popupOverlay = document.querySelectorAll('.popup');
+const popupLabel=document.querySelector(".popup__label");
+const popupImg = document.querySelector('.popup__img');
 
 const variablesValidation = {
   formSelector: '.popup__form',
@@ -25,4 +27,4 @@ const variablesValidation = {
   errorClass: 'popup__error_visible'
 }; 
 
-export {popupProfile,popupCard,popupImage,popupCloseProfile,popupCloseCard,popupCloseImage,editButton,addButton,popupProfileName,popupProfileProf,profileName,profileProf,cards,cardTemplate,popupCardName,popupCardLink,popupOverlay,variablesValidation}
+export {popupProfile,popupCard,popupImage,popupCloseProfile,popupCloseCard,popupCloseImage,editButton,addButton,popupProfileName,popupProfileProf,profileName,profileProf,cards,cardTemplate,popupCardName,popupCardLink,popupOverlay,variablesValidation,popupLabel,popupImg}

@@ -1,4 +1,4 @@
-import {popupCardName,popupCardLink,popupCard,popupImage,cardTemplate,cards} from "./constants.js"
+import {popupImage,cardTemplate,popupLabel,popupImg} from "./constants.js"
 import {openPopup, closePopup} from "./modal.js"
 
 function createCard (imgValue,nameValue) {
@@ -18,20 +18,11 @@ function createCard (imgValue,nameValue) {
 
   cardImage.addEventListener('click', function(evt){
     openPopup(popupImage);
-    const popupLabel=document.querySelector(".popup__label");
-    document.querySelector('.popup__img').src=evt.target.src;
-    document.querySelector('.popup__img').alt=evt.target.alt;
+    popupImg.src=evt.target.src;
+    popupImg.alt=evt.target.alt;
     popupLabel.textContent=evt.target.alt;
   })
   return cardElement
 }
 
-function handleCardFormSubmit(evt){
-  evt.preventDefault(); 
-  cards.prepend(createCard(popupCardLink.value,popupCardName.value));
-  popupCardName.value='';
-  popupCardLink.value='';
-  closePopup(popupCard);
-}
-
-export {createCard,handleCardFormSubmit};
+export {createCard};
