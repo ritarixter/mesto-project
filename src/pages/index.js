@@ -5,6 +5,11 @@ import {createCard} from "../components/card.js";
 import enableValidation from "../components/validate.js"
 import {userInformation,cardsLoad,profileChange,addCard,changeAvatar} from "../components/api.js"
 import {setBtnLabel} from "../components/utils.js"
+export let currentUserId = null;
+function renderProfile(name, prof){
+  profileName.textContent = name;
+  profileProf.textContent = prof;
+};
 
 function handleCardFormSubmit(){
   setBtnLabel(popupCardSave, true);
@@ -25,8 +30,7 @@ function handleProfileFormSubmit () {
   setBtnLabel(popupProfileSave, true);
   profileChange(popupProfileName.value,popupProfileProf.value)
   .then(()=>{
-    profileName.textContent = popupProfileName.value;
-    profileProf.textContent = popupProfileProf.value;
+    renderProfile(popupProfileName.value,popupProfileProf.value)
     closePopup(popupProfile);
   })
   .catch((err) => {
@@ -51,8 +55,17 @@ function handleAvatarFormSubmit () {
   
 }
 
+const loadData = Promise.all([userInformation(), cardsLoad()])
+  .then(data => {
+    currentUserId = data[0]._id;
+    renderProfile(data[0].name, data[0].about);
+    profileAvatar.setAttribute('src', `${data[0].avatar}`);
+    loadingCards(data[1]);
+  })
+  .catch(err => console.log(err));
+
 editButton.addEventListener('click', function(){
-  openPopup(popupProfile);
+  openPopup(popupProfile,profileProf.textContent);
   popupProfileName.value = profileName.textContent;
   popupProfileProf.value = profileProf.textContent;
 });
@@ -103,15 +116,14 @@ userInformation()
   console.log(err); // выводим ошибку в консоль
 }); 
 
-cardsLoad()//Загружаю информацию о всех карточках с сервера
-.then((res)=>{
+//cardsLoad()Загружаю информацию о всех карточках с сервера
+function loadingCards(res){
+//.then((res)=>{
   res.forEach(item => {
     cards.prepend(createCard(item.link,item.name,item.likes.length,item.owner._id,item._id, item.likes));//Создаю по карточке   
   })
-})
-.catch((err) => {
-  console.log(err); // выводим ошибку в консоль
-}); 
+//})
+}
 
 
 

@@ -1,6 +1,7 @@
 import { popupImage, cardTemplate, popupLabel, popupImg } from "./constants.js";
 import { openPopup } from "./modal.js";
 import { deleteCard, sendLike, deleteLike } from "./api.js";
+import {currentUserId} from "../pages/index.js"
 
 function createCard(
   imgValue,
@@ -22,14 +23,14 @@ function createCard(
 
   if (likeValue > 0) {
     likesArray.forEach((like) => {
-      if (like._id === "6933cfbb3192ddb277b680f1") {
+      if (like._id === currentUserId) {
         buttonLike.classList.add("element__btn_active");
       }
     });
   } else {
     cardLike.textContent = 0;
   }
-  if (user_id !== "6933cfbb3192ddb277b680f1") {
+  if (user_id !== currentUserId) {
     buttonDelete.classList.add("element__delete_hidden");
   } else {
     buttonDelete.classList.remove("element__delete_hidden");
