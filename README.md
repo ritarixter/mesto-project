@@ -13,4 +13,4 @@
 * ECMAScript 8
 * Webpack
 
-[Ссылка на GitHub Pages](https://ritarixter.github.io/mesto/index.html)
+[Ссылка на GitHub Pages](https://ritarixter.github.io/mesto-project/)
