@@ -16,19 +16,24 @@ function errorShow(error, errorClass, input, inputErrorClass) {
   input.classList.add(inputErrorClass);
 }
 
-function buttonDisabled(button,inactiveButtonClass) {
+function buttonDisabled(button, inactiveButtonClass) {
   button.setAttribute("disabled", "disabled");
   button.classList.add(inactiveButtonClass);
 }
 
-function enableButtonIsFormValid(inputs,submitButtonSelector,form,inactiveButtonClass) {
+function enableButtonIsFormValid(
+  inputs,
+  submitButtonSelector,
+  form,
+  inactiveButtonClass
+) {
   const button = form.querySelector(submitButtonSelector);
   const formIsValid = inputs.every((input) => input.validity.valid);
   if (formIsValid) {
     button.removeAttribute("disabled");
     button.classList.remove(inactiveButtonClass);
   } else {
-    buttonDisabled(button,inactiveButtonClass);
+    buttonDisabled(button, inactiveButtonClass);
   }
 }
 
@@ -50,16 +55,26 @@ export default function enableValidation(variablesValidation) {
     );
     inputs.forEach((input) => {
       input.addEventListener("input", function (evt) {
-        inputIsValid(input,variablesValidation.errorClass,variablesValidation.inputErrorClass);
-        enableButtonIsFormValid(inputs,variablesValidation.submitButtonSelector, form,variablesValidation.inactiveButtonClass);
+        inputIsValid(
+          input,
+          variablesValidation.errorClass,
+          variablesValidation.inputErrorClass
+        );
+        enableButtonIsFormValid(
+          inputs,
+          variablesValidation.submitButtonSelector,
+          form,
+          variablesValidation.inactiveButtonClass
+        );
       });
     });
 
     form.addEventListener("submit", function (evt) {
       evt.preventDefault();
-      const button = form.querySelector(variablesValidation.submitButtonSelector);
-      buttonDisabled(button,variablesValidation.inactiveButtonClass);
+      const button = form.querySelector(
+        variablesValidation.submitButtonSelector
+      );
+      buttonDisabled(button, variablesValidation.inactiveButtonClass);
     });
   });
 }
-
