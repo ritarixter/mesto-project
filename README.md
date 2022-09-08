@@ -3,7 +3,7 @@
 **Описание**
 "Mesto" - это интерактивная страница, где пользователи могут публиковать фотографии и лайкать их.
 
-![Ссылка на проект] (https://ritarixter.github.io/mesto-project/)
+[Ссылка на проект] (https://ritarixter.github.io/mesto-project/)
 
 ## Функционал:
 
@@ -38,7 +38,6 @@
 ## Сборка проекта
 
 Чтобы собрать и запустить проект на [localhost:3000](http://localhost:3000) выполните следующие команды в своей локальной директории:
-
 - `$ git clone https://github.com/ritarixter/react-burger.git`
 - `$ npm install`
 - `$ npm run build`
