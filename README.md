@@ -3,7 +3,7 @@
 **Описание**
 "Mesto" - это интерактивная страница, где пользователи могут публиковать фотографии и лайкать их.
 
-[Ссылка на проект](https://ritarixter.github.io/mesto-project/)
+[Ссылка на проект](https://ritarixter.github.io/mesto-project/index.html)
 
 ## Функционал:
 
