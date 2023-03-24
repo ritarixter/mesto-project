@@ -38,7 +38,7 @@
 ## Сборка проекта
 
 Чтобы собрать и запустить проект на [localhost:3000](http://localhost:3000) выполните следующие команды в своей локальной директории:
-- `$ git clone https://github.com/ritarixter/react-burger.git`
+- `$ git clone https://github.com/ritarixter/mesto-project`
 - `$ npm install`
 - `$ npm run build`
 - `$ npm run dev`
